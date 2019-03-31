@@ -6,5 +6,5 @@ require 'json'
 doc = Nokogiri::HTML(open('http://testnet2.quarkchain.io/getFullStats'))
 
 JSON.parse(doc)['shards'].last(4).each do |shard|
-  ap "#{shard['fullShardId']} =-=> #{shard['difficulty']}"
+  ap "#{shard['fullShardId']} => #{shard['difficulty']}"
 end
